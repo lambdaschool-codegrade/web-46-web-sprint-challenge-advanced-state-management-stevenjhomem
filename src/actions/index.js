@@ -13,7 +13,14 @@ export const fetchSmurfs = () => dispatch => {
     .catch(err => dispatch({type: SMURF_FETCH_FAIL, payload: err}))
 };
 
-export const addSmurf = (newSmurf) => {
+export const addSmurf = (name,position, nickname,description) => {
+    const newSmurf = {
+        id:Math.floor(Math.random()*100000),
+        name: name,
+        position: position,
+        nickname: nickname,
+        description: description,
+    }
     return ({type: ADD_SMURF, payload: newSmurf})
 };
 

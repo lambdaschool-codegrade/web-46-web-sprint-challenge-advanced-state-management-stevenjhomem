@@ -23,7 +23,7 @@ const AddForm = (props) => {
             props.formError();
         }
         else(
-            props.addSmurf(state)
+            props.addSmurf(state.name, state.position, state.nickname, state.description)
         )
     }
 
