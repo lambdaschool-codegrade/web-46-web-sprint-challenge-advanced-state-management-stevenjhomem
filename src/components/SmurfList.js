@@ -3,13 +3,15 @@ import Smurf from './Smurf';
 import {connect} from 'react-redux';
 
  const SmurfList = (props)=> {
+
     if (props.isLoading) {
         return <h1>Loading...</h1>;
     }
 
     return(<div className="listContainer">
+        {console.log(props.smurfs)}
         {props.smurfs.map(smurf => 
-            <Smurf smurf={smurf} key={smurf}/>
+            <Smurf smurf={smurf} key={smurf.id}/>
         )}
     </div>);
 }

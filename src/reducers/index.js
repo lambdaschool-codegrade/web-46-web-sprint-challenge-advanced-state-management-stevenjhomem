@@ -18,7 +18,7 @@ const reducer = (state=initialState, action)=>{
         case SMURF_FETCH_SUCCESS:
             return {
                 ...state,
-                smurfs: [...state.smurfs, action.payload],
+                smurfs: action.payload,
                 loading: false,
             };
         case SMURF_FETCH_FAIL:
@@ -29,7 +29,7 @@ const reducer = (state=initialState, action)=>{
         case ADD_SMURF: 
             return {
                 ...state,
-                smurfs: [...state.smurfs, action.payload]
+                smurfs: [...state.smurfs, action.payload],
             };
         case FORM_ERROR:
             return {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {connect} from 'react-redux'
 
 const AddForm = (props) => {
     const [state, setState] = useState({
@@ -50,6 +51,8 @@ const AddForm = (props) => {
         </form>
     </section>);
 }
+
+// const mapStateToProps = 
 
 export default AddForm;
 
