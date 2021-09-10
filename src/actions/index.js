@@ -17,7 +17,7 @@ export const addSmurf = (newSmurf) => {
     return ({type: ADD_SMURF, payload: newSmurf})
 };
 
-export const errorMessage = () => {
+export const formError = () => {
     return ({type: FORM_ERROR});
 }
 
